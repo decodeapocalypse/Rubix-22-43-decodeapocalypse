@@ -1,1 +1,313 @@
-hii
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("http://kitchen8.com.au/wp-content/uploads/2020/01/flat-lay-photography-of-vegetable-salad-on-plate-1640777.jpg"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 50%;
+}
+
+.navbar{
+    overflow: hidden;
+    background: #000000 ;
+    height:80px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position:sticky;
+    top: 0px;
+    z-index: 999;
+}
+
+.navbar a.active {
+    background-color: dodgerblue;
+    color: white;
+  }
+  
+.navbarcontainer{
+    display:flex;
+    justify-content: space-between; 
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+ }
+
+#navbarlogo{
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    font-size: 40px;
+    background-color: #77C9D4;
+    background-image: linear-gradient(to right, #00b5fd 30% , #00ff0d);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+.navbarmenu{
+    display:flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navitem{
+    height: 80px;
+    font-size: 25px;
+}
+
+.navlink{
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    text-decoration: none;
+    height: 100%;
+    transition: all 0.5s ease;
+}
+
+.navlink:hover{
+    color: #2cb2ff;
+    transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 1000px){
+    .navbarcontainer{
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+        z-index: 1;
+        width: 100%;
+        padding: 0px;
+    }
+
+    .navbarmenu{
+        display: grid;
+        grid-template-columns: auto;
+        margin-top: 60px;
+        position: absolute;
+        width: 100%;
+        opacity: 1;
+        transition: all 0.7s ease;
+        z-index: -1;
+        background: #000000;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .navbar_menu.active{
+        background: #131313;
+        top:100%;
+        opacity:1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 60vh;
+        font-size: 1rem;  
+    }
+
+    #navbarlogo{
+        padding-left: 10px;
+        font-size: 30px;
+    }
+
+    #navtoggle.bar{
+        width: 125px;
+        margin: 30px auto;
+        padding: 50px;
+        transition: all 0.5s ease-in-out;
+        background: #fff;
+    }
+}
+
+
+/* Slideshow container
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  background-position: center;
+}
+
+/* Caption text 
+.text {
+  color: #000000;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) 
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators 
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation 
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size 
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+} */
+
+/* .hero-image{
+    margin: 0px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://kitchen8.com.au/wp-content/uploads/2020/01/flat-lay-photography-of-vegetable-salad-on-plate-1640777.jpg"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    height: 50%;   
+} */
+
+.hero-text{
+    margin: 10px;
+    text-align: center;
+    color:#fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    top: 50%;
+  left: 50%;
+}
+
+#searchbutton1{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#inputsearch{
+    /* margin-top: 280px; */
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    /* margin-bottom: 280px; */
+    border-radius: 5px;
+    padding: 15px;
+    background: rgba(0,0,0,0.1) ;
+    border: 2px solid black;
+    color: #fff;
+    font-size: 30px;
+}
+
+
+
+.searchbtn{
+    height: 100px;
+    width: 200px;
+    margin-top: 280px;
+    margin-bottom: 280px; 
+    border-radius: 5px ;
+    animation-delay: -0.5s;
+    color: black;
+    border: 2px solid black;
+    font-size: 30px;
+    transition: all 0.5s ease;
+    background-image: linear-gradient(62deg, #E0C3FC 0%,#8EC5FC 100%)  ;
+    
+}
+
+.searchbtn:hover{
+    background-image:rgb(230,13,210);
+    /* background: linear-gradient(90deg, rgba(230,13,210,1) 35%, rgba(0,211,253,1) 100%);
+    transition: all 0.5s ease; */
+    background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+}
+
+.btn1{
+    border-radius: 7px;
+    width: 100px;
+    height: 30px;
+    background-color: #00b5fd;
+    text-decoration: none;
+}
+
+.btn1:hover{
+    background-color: rgb(163, 163, 241);
+    text-decoration: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+  }
+
+#content{
+    margin-bottom: 10px;
+    padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+    margin-left: 20px;
+    text-align: center;
+    align-content: center;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+
