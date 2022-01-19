@@ -1,45 +1,48 @@
 {% extends 'base.html' %}
 {% block title %} {% endblock %}
 {% block content %}
+<div class="wholepage">
 <center>
-<section class="section">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
+<!-- <section class="section"> -->
+
+    <div class="containerform">
+        <div class="formadd">
+            <!-- <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
                         <h2 class="fw-bold">Add Product</h2>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body"> -->
                         <form action="" method="POST" enctype="multipart/form-data">
                             {% csrf_token %}
-                            <div class="mb-3">
-                                <label for="" class="form-label">Name</label>
-                                <input type="text" Required name="name" class="form-control" style="width:70%;">
+			<div class="additems">
+                                <input type="text" Required name="name" class="form-control" placeholder="Name">
                             </div>
-			    <div class="mb-3">
-                                <label for="" class="form-label">Expiry</label>
-                                <input type="date" Required name="date" class="form-control" style="width:70%;">
+                            <div class="additems">                                
+                                <input type="date" Required name="date" class="form-control" palceholder="Date">
                             </div>
-                            <div class="mb-3">
-                                <label for="" class="form-label">Price</label>
-                                <input type="text" Required name="price" class="form-control" style="width:70%;">
+                            <div class="additems">                              
+                                <input type="text" Required name="price" class="form-control" placeholder="Price">
                             </div>
-                             <div class="mb-3">
-                                <label for="" class="form-label">Image</label>
-                                <input type="file" Required name="image" class="form-control" style="width:80%;">
-                            </div>
-			    <div class="mb-3">
-                                <label for="" class="form-label">Status</label>
-                                <input type="text" Required name="status" class="form-control" style="width:80%;">
+                             <div class="additems">
+                                <div class="form-label">Image</div>
+                                
+                                <input type="file" Required name="image" class="form-control" id="chooseimgbtn" placeholder="Image">
+                              
                             </div>
                             <button type="submit" class="btn btn-primary">Save</button>
                         </form>
                     </div>
-                </div>
+
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel">
+                 
             </div>
         </div>
     </div>
+</div>
 </center>
-</section>
+</div>
+<!-- </section> -->
 {% endblock %}
