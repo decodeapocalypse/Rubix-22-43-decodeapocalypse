@@ -2,19 +2,32 @@
 {% block title %}{% endblock %}
 
 {% block content %}
-<div class="Box">
-<h1 style="color:white"> 	Change password </h1>
-<form method="POST">
-{% csrf_token %}
-	<div class="inputBox" id="nav">
-	<input type="text" name="pw1" placeholder="Enter new password" required >
+<!-- <div class="Box"> -->
+<div class="chgpasspage">
+	<div class="formchgpass">
+		<div class="chgpasscontainer">
+		<form method="POST">
+		{% csrf_token %}
+			<h1 style="color:rgb(0, 0, 0)">Change password </h1>
+			<div class="passformdetail">
+				<input type="text" name="pw1" class="passformlist" placeholder="Enter new password" required ></br>
+			</div>
+			<div class="passformdetail">
+				<input type="password" name="pw2" class="passformlist" placeholder="Confirm password" required></br>
+			</div>
+			<!-- <div class="chgpassbtn"> -->
+				<button class="chgpassbtn" input type="submit" value="submit">Submit
+				<!-- <input type="submit" value="Submit"> -->
+			</button>
+			<!-- </div> -->
+				
+			<p style="color:rgb(0, 0, 0)">{{ msg }}</p>
+			</div>
+			
+		</div>
+		</form>
 	</div>
-	<div class="inputBox">
-	<input type="password" name="pw2" placeholder="Confirm password" required>
-	</div>
-	<input type="submit" value="Submit">
-	<br>
-	<br>
-	<p style="color:white">{{ msg }}</p>
 </div>
-</form>
+
+
+{% endblock %}
