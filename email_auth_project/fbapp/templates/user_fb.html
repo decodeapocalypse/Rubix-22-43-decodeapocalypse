@@ -1,23 +1,27 @@
 {% extends 'base.html' %}
 {% block title %} {% endblock %}
 {% block content %}
-<center>
-	<div class="container">
-	<h1 style="color:white">Write Your Message</h1>
-	<div class="id">
+
+<div class="contactwholepage">
+	<div class="contactcontainer">
+	
+	
+
 	<form method="POST">
+		<h1 style="margin-bottom: 20px;">Write Your Message</h1>
 	{% csrf_token %}
-		<table style="color:white;">
+		<table class="contactuslist" style="color:rgb(0, 0, 0);">
 		
 			{{ fm.as_table }}
 		
 		</table>
 		<br>
-		<button>Submit</button>
+		<button class="contactusbtn">Submit</button>
 	</form>
+	
+	<p style="color:rgb(0, 0, 0)">{{ msg }}</p>
+
 	</div>
-	<p style="color:white">{{ msg }}</p>
-	</div>
-</center>
+</div>
 
 {% endblock %}
