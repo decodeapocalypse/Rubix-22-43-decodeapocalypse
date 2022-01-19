@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: center;
     font-family: 'Roboto', sans-serif;
-    background: url("https://i.pinimg.com/originals/df/3d/18/df3d18bdbed25db69f4defc828d1fd1c.png") no-repeat;
+    background: url("donuts.jpg") no-repeat;
     background-size:cover ;
 
 }
