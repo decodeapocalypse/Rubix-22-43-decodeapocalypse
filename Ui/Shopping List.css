@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    background: url("https://images.iphonephotographyschool.com/23035/1120/food.jpg") no-repeat;
+    background-size:cover ;
+
+}
+#addbutton1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+#inputsearch{
+    width: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: initial;
+    height: 80px;
+    padding: 5px 30px;
+    background: rgba(187, 180, 180, 0.39) ;
+    border: 2px solid rgba(0, 0, 0, 0.644);
+    border-radius:30px;
+    color: #000;
+    font-size: 26px;
+}
+.searchbtn{
+    height: 80px;
+    width: 180px;
+    margin-left: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.644);
+    border-radius:30px;
+    font-size: 26px;
+    animation-delay: -0.5s;
+    transition: all 0.5s ease;
+    background-image: linear-gradient(62deg, #db7bd3 0%,#a489e4 100%);
+    cursor:pointer;
+}
+.searchbtn:hover{
+    background-image: linear-gradient(62deg, rgb(180, 42, 166) 0%, #9675e4 100%);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.header_fixed {
+    max-height: 100vh;
+    width: 100%;
+    overflow: auto;
+    border: 1px solid #dddddd;
+}
+
+.header_fixed thead th {
+    position: relative;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.582);
+    color: #e6e7e8;
+    font-size: 25px;
+}
+tr{
+    width: 100%;
+    border-radius: 1px;
+    margin: 20px;
+    cursor: default;
+}
+th,
+td {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 90px;
+    font-size: 20px;
+}
+th{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+td{
+    padding-left: 80px;
+}
+
+tr:nth-child(even) {
+    background-color: #edeef191;
+}
+
+tr:nth-child(odd) {
+    background-color: #edeef171;
+}
+
+tr:hover td {
+    color: #0e0f0f;
+    background-color: #ffffff;
+}
+
+td button {
+    border: none;
+    margin-left: 30px;
+    padding: 7px 20px;
+    border-radius: 20px;
+    background-color: rgba(41, 39, 39, 0.788);
+    color: #e6e7e8;
+    font-size: 20px;
+    cursor: pointer;
+}
+td button:hover{
+    background-color: rgba(41, 39, 39, 0.904);
+}
