@@ -1,18 +1,23 @@
 {% extends 'base.html' %}
 {% block title %} {% endblock %}
 {% block content %}
-<div class="box">
-	<h2>Request for new password</h2>
-	<form method="POST">
-	{% csrf_token %}
-		<div class="inputBox" id="nav">
-      			<input type="email" name="un" required onkeyup="this.setAttribute('value', this.value);" value="">
-      			<label>Email</label>
-    		</div>
-    		<input type="submit" value="Submit">
-		<br>
-		<br>
-		<p style="color:white">{{ msg }}</p>	
-	</form>
+<div class="newpasspage">
+	<div class="newpasscontainer">
+		
+		<form method="POST">
+			<h2 class= "newpasstext">Request for new password</h2></br>
+		{% csrf_token %}
+			<div class="newpassform">
+				<!-- <label>Email</label> -->
+				<div class="newpasstext">Email</div>
+					<input type="email" name="un" placeholder="Enter your Email" class="newpasslist" required onkeyup="this.setAttribute('value', this.value);" value="">
+					
+				</div>
+				<!-- <input type="submit" value="Submit"> -->
+				<button class="newpassbtn" input type="submit" value="Submit">Submit</button>
+			<p style="color:rgb(0, 0, 0)">{{ msg }}</p>	
+		</form>
+	</div>
 </div>
+
 {% endblock %}
