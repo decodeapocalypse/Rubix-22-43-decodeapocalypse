@@ -2,7 +2,92 @@
 {% block title %} {% endblock %}
 {% block content %}
 
-	<center>
-		<h1 style="color:white">This page will appear only once(Welcome message goes here)</h1>
-	</center>
+	
+
+<div class="homeimg">
+	
+
+<div class="banner-home">
+	<div class="content-win-home">
+		<div class="content-vid-home">
+			<div class="image-vid-home">
+				
+				<img class="image__img-home" src="https://images-prod.healthline.com/hlcmsresource/images/AN_images/healthy-eating-ingredients-1296x728-header.jpg" alt="Bricks">
+				<div class="hometext">
+					<h3>CRAVE!<br>
+						We help you manage your kitchen and reduce food wastage.</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="divisions-home">
+	<div class="div1-home">
+		<div class="head-home">
+			<h2>Add items that you Buy</h2>
+		</div>
+		<div class="info-home">
+			<p class="para-home">Click on the tab that reads ‘add items’ to add all the contents of your fridge along with expiry dates. Guess what? You can simply add pictures too in case you forget the name! XD
+			</p>
+		</div>
+		<div class="image-home">
+			<!-- <img src="https://img.favpng.com/3/10/16/refrigerator-cartoon-png-favpng-GM4UcvrUHL54jnfMWB4XRb38u.jpg"> -->
+		</div>
+		<button type="button" class="btn-home"><a href="{% url 'add-prod' %}">Add Items</a></button>
+	</div>
+	<div class="div2-home">
+		<div class="head-home">
+			<h2>View Items that we added.</h2>
+		</div>
+		<div class="info-home">
+			<p class="para-home">Click on the tab that reads ‘view items’ to see all the contents of your fridge along with expiry dates to keep a track of your bought produce. Best part? We will give you a notification when the product has reached the expiry date!
+			</p>
+		</div>
+		<div class="image-home">
+			<!-- <img src="https://static7.depositphotos.com/1283262/784/v/600/depositphotos_7841312-stock-illustration-refrigerator.jpg"> -->
+		</div>
+		<button type="button" class="btn-home"><a href="{% url 'index' %}">View Items</a></button>
+	</div>
+	<div class="div3-home">
+		<div class="head-home">
+			<h2>Create a Shopping List</h2>
+		</div>
+		<div class="info-home">
+			<p class="para-home">Tired of finding a pen to write groceries when you remember them?We have got you covered! You can add items and create a shopping list by clicking on the ‘shopping list’ icon on the top of the screen.</p>
+		</div>
+		<div class="image-home">
+			<!-- <img src="checklist.png"> -->
+		</div>
+		<button type="button" class="btn-home"><a href="{% url 'createtask' %}">Create List</a></button>
+	</div>
+	<!-- <div class="div4-head">
+		<div class="head-home">
+			<h2>Search for Recipes</h2>
+		</div>
+		<div class="info-home">
+			<p class="para-home">Have got things in the fridge but don’t know what to do for dinner? Choose your hero of the dish and we’ll give you ideas right away! Click on the ‘Recipies’ icon to find out how easy it is!
+			</p>
+		</div> -->
+		<!-- <div class="image-home">
+			<img src="checklist.png">
+		</div>
+		<button type="button" class="btn-home"><a href="{% url 'recipe' %}">Search them</a></button>
+	</div> -->
+	<div class="div5-home">
+		<div class="head-home">
+			<h2>Get Recommendations of the Items</h2>
+		</div>
+		<div class="info-home">
+			<p class="para-home">There’s more you ask? Yes! We also give you recommendations to double check your shopping list based on your previous purchases! Click on the ‘Recommendations’ icon to find out yours!
+			</p>
+		</div>
+		<div class="image-home">
+			<!-- <img src="checklist.png"> -->
+		</div>
+		<button type="button" class="btn-home"><a href="{% url 'recommend' %}">Get Recommendations</a></button>
+	</div>
+
+</div>
+</div>
 {% endblock %}
