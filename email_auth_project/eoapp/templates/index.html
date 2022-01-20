@@ -5,7 +5,7 @@
 
 
 {% block content %}
-<center>
+<!-- <center>
 <section class="section">
     <div class="contains">
         <div class="row justify-content-center">
@@ -19,46 +19,14 @@
                             <thead>
                                 <tr>
                                     <th>Name</th>
-				    <th>Expiry</th>
+				                    <th>Expiry</th>
                                     <th>Price</th>
                                     <th>Image</th>
                                     <th>Remove?</th>
 				    <th>Status</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                {% for p in products %}
-                                    <tr>
-                                        <td>{{ p.name }} </td>
-					<td>{{ p.date }} </td>
-                                        <td>{{ p.price }} </td>
-                                        {% if p.image %}
-                                            <td>
-                                                <img src="{{ p.image.url }}" alt="" class="prod-size">
-                                            </td>
-                                        {% else %}
-                                            <td>
-                                                <img src="{% static 'images/product.png' %}" alt="" class="prod-size">
-                                            </td>
-                                        {% endif %}
-                                        <td>
-                                            <a href="{% url 'delete-prod' p.id %}" class="btn btn-danger badge">Delete</a>
-                                        </td>
-					<td>
-						{% if p.is_past_due %}
-							<script>
-								alert( "{{ p.name }}" + " is expired.");		
-							</script>
-    							Expired
-						{% else %}
-    							Edibale
-						
-						{% endif %}
-						
-					</td>
-                                    </tr>
-                                {% endfor %}
-                            </tbody>
+                            
                         </table>
                     </div>
                 </div>
@@ -66,5 +34,97 @@
         </div>
     </div>
 </section>
-</center>
-{% endblock %}
+</center> -->
+
+
+<div class="View-body">
+    <div class="container">
+    <div class="header_fixed">
+        <table class="View-table">
+            <thead class="View-thead">
+                    <tr class="View-row">
+                        <th class="View-head">Image</th>
+                        <th class="View-head">Name</th>
+                        <th class="View-head">Expiry</th>
+                        <th class="View-head">Price</th>
+                       
+                        <th class="View-head">Remove?</th>
+                        <th class="view-head">Status</th>
+                    </tr>
+                </thead>
+            <tbody>
+                    {% for p in products %}
+                        <tr>
+                            {% if p.image %}
+                            <td class="View-col">
+                                <img src="{{ p.image.url }}" alt="" class="prod-size">
+                            </td>
+                        {% else %}
+                            <td class="View-col">
+                                <img src="{% static 'images/product.png' %}" alt="" class="prod-size">
+                            </td>
+                        {% endif %}
+                            <td class="View-col">{{ p.name }} </td>
+                            <td class="View-col">{{ p.date }} </td>
+                            <td class="View-col">{{ p.price }} </td>
+                           
+                            <td class="View-del">
+                                <a href="{% url 'delete-prod' p.id %}" class="btn btn-danger badge">Delete</a>
+                            </td>
+                            <td>
+                                {% if p.is_past_due %}
+                                    <script>
+                                        alert( "{{ p.name }}" + " will expire tomorrow.");		
+                                    </script>
+                                        Will Expire
+                                {% else %}
+                                        Edible                             
+                                {% endif %}
+                                
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </div>
+        </div>
+        </div>  
+
+        {% endblock %}
+
+<!-- aditi -->
+
+                <!-- <tr class="View-row">
+                    <td class="View-col"><img class="View-img" src="https://static.turbosquid.com/Preview/2017/03/01__09_47_53/MilkCarton01.png7330FC04-B8BE-4D21-92F8-B5E1EBCA761FLarge.jpg"/></td>
+                    <td class="View-col">Milk</td>
+                    <td class="View-col">22/01/2022</td>
+                    <td class="View-col">&#x20b9; 80</td>
+                  <td class="View-col"><button class="View-del">Delete</button></td>
+                </tr>
+                <tr class="View-row">
+                    <td class="View-col"><img class="View-img" src="https://c8.alamy.com/comp/CW15R9/warburtons-thick-sliced-white-bread-loaf-CW15R9.jpg"/></td>
+                    <td class="View-col">Bread</td>
+                    <td class="View-col">20/01/2022</td>
+                    <td class="View-col">&#x20b9; 25</td>
+                  <td class="View-col"><button  class="View-del">Delete</button></td>
+                </tr>
+                <tr class="View-row">
+                    <td class="View-col"><img class="View-img" src="https://static.turbosquid.com/Preview/2017/03/01__09_47_53/MilkCarton01.png7330FC04-B8BE-4D21-92F8-B5E1EBCA761FLarge.jpg"/></td>
+                    <td class="View-col">Milk</td>
+                    <td class="View-col">22/01/2022</td>
+                    <td class="View-col">&#x20b9; 80</td>
+                  <td class="View-col"><button class="View-del">Delete</button></td>
+                </tr>
+                <tr class="View-row">
+                    
+                    <td class="View-col"><img class="View-img" src="https://c8.alamy.com/comp/CW15R9/warburtons-thick-sliced-white-bread-loaf-CW15R9.jpg"/></td>
+                    <td class="View-col">Bread</td>
+                    <td class="View-col">20/01/2022</td>
+                    <td class="View-col">&#x20b9; 25</td>
+                  <td class="View-col"><button class="View-del">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+</body>
+
+</html> -->
