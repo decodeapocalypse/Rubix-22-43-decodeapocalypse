@@ -1,18 +1,33 @@
 {% extends 'base.html' %}
 {% block title %} {% endblock %}
 {% block content %}
-<div class="box">
-  <h2>Sign-Up</h2>
+
+	<div class="LS-body">
+  <h1 class="signupheader">Sign-Up</h1>
+  <div class="logincontainer">
   <form>
-    <div class="inputBox" id="nav">
-      	<input type="email" name="un" required onkeyup="this.setAttribute('value', this.value);" value="">
-      	<label>Email</label>
+    <div class="LS-box">
+      	<input type="email" class="input" name="un" placeholder="email" required onkeyup="this.setAttribute('value', this.value);" value="">
     	</div>
     	
-   	 <input type="submit" value="Sign up">
+   	 <input type="submit" class="loginbtn" value="Sign up">
 	<br>
 	<br>
-	<p style="color:white">{{ msg }}</p>
+	<p style="color:rgb(0, 0, 0)">{{ msg }}</p>
  	 </form>
 	</div>
+	</div>
 {% endblock %}
+
+<!-- <div class="LS-body"> -->
+	<!-- <div class="logincontainer"> -->
+		
+		
+			<!-- <input type="email" name="email" id="email" placeholder="Enter Email" class="input">
+		</div>
+		<div class="LS-box">
+			<input type="password" name="password" id="password" placeholder="Enter Password" class="input">
+		</div>
+		<button class="loginbtn" id="loginbtn">Sign-up</button>
+	 </div> 
+</div> -->
