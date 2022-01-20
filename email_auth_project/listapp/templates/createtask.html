@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}Create Task{% endblock %}
+
+{% block content %}
+<center>
+
+<div class="shopping-bag">
+<div class="shoppingbag-container">
+	
+	<h1 style="color:black"> Create Task </h1>
+
+
+<div class="Search-bag">
+<div class="input-group-bag">
+
+<div class="shopping-button" id ="shopping-button">
+
+	<form method = 'POST'>
+	{% csrf_token %}
+	<center>
+		<table border = '0' style="color:black;">
+			{{ fm.as_table }}
+		</table>
+	</center>
+		<br>
+		<div class="input-group-append">
+		<a href="{% url 'viewtask' %}"><button>Submit</button></a>
+		</div> 
+	</form>
+	<p style="color:white">{{ msg }}</p>
+
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</center>
+
+{% endblock %}
+
+
+
+
+
+
+        
+                
+                    
+                        
+                            
+            
+
+
+

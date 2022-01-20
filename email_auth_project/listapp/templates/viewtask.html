@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %}Create Task{% endblock %}
+
+{% block content %}
+
+<center>
+<div class="shopping-bag">
+<div class="shoppingbag-container">
+
+
+<h1 style="color:black"> View Task </h1>
+<! #4CAF50 !>
+<h2 style="color:black">Welcome {{ user.username }}</h2>
+
+
+
+<div class="header_fixed">
+<table class="shopping-table">
+	{% if data %}
+		<thead class="ST-Tablehead">
+                    <tr class="ST-row">
+                        <th class="ST-head">Sr No</th>
+                        <th class="ST-head">Task</th>
+                        <th class="ST-head">Created On</th>
+                        <th class="ST-head">Done?</th>
+                    </tr>
+                </thead>
+	{% endif %}
+	
+		{% for d in data %}
+		<tbody>
+		<tr class="ST-row">
+			<td class="ST-col">{{ forloop.counter }}</td>
+			<td class="ST-col">{{ d.task }}</td>
+			<td class="ST-col">{{ d.dt }}</td>
+			<td class="ST-col"><a href = "/delete/{{ d.id }}" ><button class="shopping-del">Completed</button></a></td>
+		</tr>	
+		{% empty %}
+		<tr class="ST-row">
+			<td class="ST-col">No Data</tr>
+		</tr>
+		</tbody>
+		{% endfor %}
+	
+
+</table>
+</div>
+
+
+</div>
+</div>
+</center>
+{% endblock %}
+
+
+
+
+
+ 
+        
+        
+                
+                
+                
+                
+           
+
