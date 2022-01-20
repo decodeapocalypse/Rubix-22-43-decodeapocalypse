@@ -1,24 +1,29 @@
 {% extends 'base.html' %}
 {% block title %} {% endblock %}
 {% block content %}
-<div class="box">
-<h2>Login</h2>
-<form method="POST">
-{% csrf_token %}
-	<div class="inputBox" id="nav">
-		<input type="email" name="un" required onkeyup="this.setAttribute('value', this.value);" value="">
-		<label>Email</label>
-    	</div>
-	<div class="inputBox">
-		<input type="password" name="pw" required value="" onkeyup="this.setAttribute('value', this.value);">
-		<label>Password</label>
-    	</div>
-	<input type="submit" value="Login">
-	<br>
-	<br>
-	<p style="color:white">{{ msg }}</p>
-</div>
-	
- </form>
 
+<div class="LS-body">
+	<h1 class="signupheader">Login</h1>
+	
+<div class="logincontainer">
+<form method="POST">
+	{% csrf_token %}
+	<div class="LS-box">
+			<input type="email" name="un" placeholder="Enter Email" class="input" required onkeyup="this.setAttribute('value', this.value);" value="">
+		</div>
+		<div class="LS-box">
+			<input type="password" name="pw" required value="" placeholder="Enter Password" class="input" onkeyup="this.setAttribute('value', this.value);">
+		</div>
+		<input type="submit" value="Login">
+		<br>
+		<br>
+		<p style="color:white">{{ msg }}</p>
+	</div>
+		
+	 </form>
+	</div>
+	</div>
+	
 {% endblock %}
+
+
