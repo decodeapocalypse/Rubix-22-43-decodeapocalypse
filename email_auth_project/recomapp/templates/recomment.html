@@ -5,37 +5,50 @@
 
 
 {% block content %}
+<div class="sectionrecom">
 <center>
-<section class="section">
-    <div class="contains">
-        <div class="row justify-content-center">
+
+    <div class="sectioncontainer">
+        <div class="recomrow">
             <div class="col-md-10">
                 <div class="card">
-                    <div class="card-header">
-                        <h1 class="fw-bold">Recommedation based on previous purchases</h1>
+                    <!-- header -->
+                    <div class="recomheader">
+                        <h1 class="fw-bold" style="font-size: 30px;">Recommedation based on previous purchases</h1>
                     </div>
-                    <div class="card-body">
-                        <table class="table table-bordered table-striped">
+
+                    <div class="recomlist">
+                        <div class="recomtabledivide">
+                        <table>
                             <thead>
+                                
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Price</th>
+                                    
+                                    <td class="lettersrecom">Name</td>
+                                    <td class="lettersrecom" >Price</td>
                                 </tr>
+                                    </div>
+
+                        </div>
                             </thead>
                             <tbody>
+                                
+                                
                                 {% for p in products %}
                                     <tr>
-                                        <td>{{ p.name }} </td>
-                                        <td>{{ p.price }} </td>
+                                        <td class="lettersrecom">{{ p.name }} </td>
+                                        <td class="lettersrecom">{{ p.price }} </td>
                                     </tr>
+                                </div>
                                 {% endfor %}
                             </tbody>
-                        </table>
+                        </table> 
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
 </center>
+</div>
+
 {% endblock %}
